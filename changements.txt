@@ -1,0 +1,25 @@
+CSS:
+    CircuitDt
+        background-image: radial-gradient(rgba(41, 41, 41, 0.6), rgba(33, 33, 34, 0.70)), url("../../assets/maping.webp");
+    Home:
+    Changer tous les chemins des background-image en ajoutant 2 "sorties" :   exemple: background-image: url('../../assets/paris1.jpg');
+
+    dans tous les css des groupes (gp....) : changer l'import du fichier de reset css (appelé base.css) : @import '../global-styles/base.css';
+
+JS/JSX: pages et composants
+Changer les chemin de tous les imports des fichiers css (et ranger les mêmes types d'import ensemble).
+Idée : on aurait pu s'en passer via un fichier css avec des imports de tous les fichiers et on appel que celui-là dans App.js mais possible pbm / bugs
+
+Faire le tri : y a t-il des pages qui sont en fait des composants ? 
+
+Résoudre :
+- {/* <p>{CircuitObject.magasins.map(magasin => magasin.recordId_magasin)}</p> */}
+- Affichage de la carte
+- Responsive 
+- PWA 
+- Souscription circuit en groupe (+1 susbcriber) - si 10/10 subscriber = on retire le circuit des groupes
+- Charger la base de donnée avec les susbcribers
+
+CSS:
+- js : onload il faut coller le contenu en haut du défilement.(comme ça si on change de format mobile...)
+- barre de défilement horizontal désactiver (overflow-x)

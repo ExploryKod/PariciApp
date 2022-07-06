@@ -1,0 +1,5 @@
+.leaflet-container {
+  height: 844px;
+  width: 390px;  
+  position: fixed;
+}
