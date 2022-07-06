@@ -33,3 +33,19 @@
     font-size: 1.5em;
     color:#0054A3; 
 }
+
+
+@media screen and (min-width:576px) {
+    .navigation {
+        position: fixed;
+        bottom:unset;
+        top:0
+     }
+
+    .navigation.sticky { 
+        position: fixed;
+        bottom:unset;
+        top:0
+    }
+
+}

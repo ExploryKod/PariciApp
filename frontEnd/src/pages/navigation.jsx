@@ -24,7 +24,7 @@ export function Navigation() {
     return (
 
         <>
-            <Outlet />
+            <Outlet className="top-outlet"/>
         
             <div className='navigation'>
               
@@ -35,9 +35,6 @@ export function Navigation() {
                     <NavLink className='nav-link' to="/login"><span class="material-icons">account_circle</span></NavLink>
                 </div>
             </div>
-
-
-
         </>
     )
 }

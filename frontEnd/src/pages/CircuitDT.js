@@ -34,7 +34,7 @@ function CircuitDT(){
                     <img className="pict" src={CircuitObject.image_circuit} alt="" />
                     <div className="contentTXT">
                         <h1>{CircuitObject.name_circuit}</h1>
-                        <p>{CircuitObject.description_circuit}</p>
+                        <div>{CircuitObject.description_circuit}</div>
                         {/* <p>{CircuitObject.magasins.map(magasin => magasin.recordId_magasin)}</p> */}
                     </div>
                 </div>

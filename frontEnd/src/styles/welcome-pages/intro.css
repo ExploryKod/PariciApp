@@ -1,17 +1,17 @@
 @import "../global-styles//base.css";
 
-.intro-page { 
-    width:100%;
+.intro-page {
+    width: 100%;
     height: 100vh;
 }
 
 /* Picture and its container */
-.picture-block { 
-    width:100vw;
+.picture-block {
+    width: 100vw;
     height: 100vh;
 }
 
-.picture-block .introPicture{
+.picture-block .introPicture {
     width: 100vw;
     height: auto;
     transform: scale(1.2);
@@ -22,11 +22,11 @@
 
 
 /* block with text and buttons below image */
-.textBlock{
+.textBlock {
     padding-bottom: 5vh;
     position: absolute;
-    left:0;
-    bottom:0;
+    left: 0;
+    bottom: 0;
     background-color: white;
     border-radius: 100px 0px 0px 0px;
     display: flex;
@@ -40,18 +40,16 @@
 }
 
 /* Carrousel made of lines above texts */
-#carrousel{
-    padding:1em 0 0.5em 0;
+#carrousel {
+    padding: 1em 0 0.5em 0;
     display: flex;
     min-height: 0;
-    height:auto;
+    height: auto;
     width: 30%;
-    /* top:5%;
-    left: 150px;
-    position: absolute;  */
+
 }
 
-.cercles{
+.cercles {
     width: 10px;
     height: 10px;
     margin: 5px;
@@ -60,7 +58,7 @@
     transition: width 2s;
 }
 
-.changeCercle{
+.changeCercle {
     background-color: blue;
     width: 50px;
     height: 10px;
@@ -72,42 +70,43 @@
 
 .text-part {
     padding: 1em 0;
-    width:100%;
+    width: 100%;
 }
 
-#titlePart, #bioPart{
+#titlePart,
+#bioPart {
     margin-left: 45px;
 }
 
-#bioPart{
+#bioPart {
     width: 300px;
     margin-bottom: 0;
 }
 
 
 /* Part that is below the text */
-#footerBlock{
-    width:100%;
+#footerBlock {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    position:relative;
-    bottom:10%;
+    position: relative;
+    bottom: 10%;
 }
 
-#skip{
+#skip {
     margin-top: 20px;
     text-decoration: none;
     font-weight: 600;
     color: black;
 }
 
-#skip:hover{
+#skip:hover {
     text-decoration: none;
     color: blue;
     font-weight: 700;
-} 
+}
 
-#buttonNext{
+#buttonNext {
     width: 50px;
     height: 50px;
     border: none;
@@ -117,122 +116,136 @@
     cursor: pointer;
 }
 
-#buttonNext:hover{
+#buttonNext:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     cursor: pointer;
 }
 
 /* Container for the button to "start" that is printed on the last slide */
-#footerEnd{
+#footerEnd {
     display: none;
     justify-content: center;
 }
 
 
-#Start{
+#Start {
     color: white;
     background-color: orange;
-    border:none;
+    border: none;
     width: 160px;
     height: 60px;
     border-radius: 60px;
 }
 
-#Start:hover{
+#Start:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     cursor: pointer;
 }
 
 
-
-
-
-
-
 @media screen and (min-width: 576px) {
-    
-    .introPicture{
-        width: 100%;
-        height: 50vh;
-    }
-    
-    .textBlock{
-        position: absolute;
-        bottom:0;
-        right:0;
-        background-color: white;
-        border-radius: 100px 0px 0px 0px;
+
+    /* Changing cicles in carrousel */
+    #carrousel {
+        padding: 1em 0 0.5em 0;
         display: flex;
         justify-content: center;
-        flex-direction: column;
-        width: 101%;
-        height: 400px;
+        min-height: 0;
+        height: auto;
+        width: 100%;
+
     }
-    
-    #carrousel{
-        display: flex;
-        top:30px;
-        left: 150px;
-        position: absolute;
-    }
-    
-    .cercles{
+
+    .cercles.previous {
         width: 10px;
         height: 10px;
         margin: 5px;
-        border-radius: 50px;
-        background-color: grey;
-        transition: width 2s;
+        border-radius: 50%;
     }
-    
-    .changeCercle{
+
+    .changeCercle {
         background-color: blue;
         width: 50px;
         height: 10px;
         margin: 5px;
         border-radius: 50px;
     }
-    
-    
-    #buttonNext{
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
-        color: white;
-        background-color: green;
+
+    /* Text part centered  */
+    .text-part {
+        text-align: center;
     }
-    
-    #footerBlock{
-        display: flex;
-        justify-content: space-around;
+
+    #bioPart {
+        width: 90%;
     }
-    
-    #footerEnd{
+
+    #titlePart {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* Picture and its container */
+
+    .picture-block {
+        width: 100vw;
+        height: 50vh;
+        background-image: url("../../assets/pexels-david-henry-6449831.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .picture-block .introPicture {
         display: none;
-        justify-content: center ;
     }
-    
-    
-    #Start{
-        color: white;
-        background-color: orange;
-        width: 160px;
-        height: 60px;
-        border-radius: 60px;
+
+    /* Set buttons at the good position */
+    #footerBlock {
+        justify-content: center;
+        width: 100%;
     }
-    
-    #skip{
-        margin-top: 20px;
-        text-decoration: none;
-        color: black;
+
+    #skip {
+        margin-left:-100%;
     }
-    
-    #titlePart, #bioPart{
-        margin-left: 45px;
+}
+
+@media screen and (min-width: 2000px) {
+
+
+    /* Make text bigger for large screen */
+    #bioPart {
+        margin: 0 auto;
+        width: 60%;
+        font-size: 1.5rem;
     }
-    
-    #bioPart{
-        width: 300px;
-        margin-bottom: 60px;
+
+    #titlePart {
+        margin: 0 auto;
+        width: 60%;
+        font-size: 2rem;
     }
+
+    /* Make footer bigger with good position */
+    #footerBlock {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #skip {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    #buttonNext {
+        width: 120px;
+        height: 120px;
+        font-size: 1.5rem;
+    }
+
 }

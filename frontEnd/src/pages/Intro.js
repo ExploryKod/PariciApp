@@ -24,12 +24,16 @@ const Intro = () => {
     });
 
     const handleClick = () => {
+        const cercle = document.querySelector(".cercles");
+        const previousCercle = document.querySelector(".previous");
+        
         document.getElementById(count).style.backgroundColor = "grey";
         document.getElementById(count).style.width = "10px";
         setCount(count + 1);
+        cercle.classList.add("previous");
         document.getElementById(count + 1).style.backgroundColor = "blue";
         document.getElementById(count + 1).style.width = "50px";
-    }
+    }  
 
     if (count === 3) {
         document.getElementById("footerBlock").style.display = "none";
