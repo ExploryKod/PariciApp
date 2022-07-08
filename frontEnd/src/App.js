@@ -6,7 +6,7 @@ import Intro from "./pages/Intro";
 import Home from "./pages/Home";
 import AllCircuits from './pages/AllCircuits';
 import CircuitDT from './pages/CircuitDT';
-import CircuitDetail from './pages/CircuitDetail';
+import CircuitsDetails from './pages/CircuitDetail';
 import GpCircuitsPage from "./pages/gpCarrouselPage";
 import Navigation from "./pages/navigation";
 import GpCircuitDescription from "./components/Gp_description_circuit";
@@ -25,7 +25,6 @@ import { AccountBox } from "./components/accountBox";
 
 import { useState } from 'react';
 import {Profile} from './pages/Profile';
-
 
 const AppContainer = styled.div`
 
@@ -59,7 +58,7 @@ function App() {
     <Route path="/" element={<Navigation />}>
     <Route index element={<Intro />} />
     <Route path="/Home" element={<Home />} />
-    <Route path="/circuitDetail" element={<CircuitDetail />} />
+    <Route path="/circuitDetail" element={<CircuitsDetails />} />
 
     <Route path="/CircuitDT/:id_circuit" element={<CircuitDT />} />
     <Route path="circuits-de-groupe/*" element={<GpCircuitsPage />} />

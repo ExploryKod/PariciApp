@@ -1,41 +1,65 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import React from 'react';
+import { latLngBounds, DivIcon } from 'leaflet';
+import {
+    MapContainer,
+    TileLayer,
+    Marker,
+    Popup,
+    FeatureGroup,
+    useMap,
+} from 'react-leaflet';
 
-import "../styles/circuits-and-map/Map.css";
+const Map = ({ waypoints }) => {
+    // -- INIT
+    // Base coords
+    const baseCoords = [12.34567, 76.54321];
 
-function Map() {
-  const [shopData, setShopData] = useState([]);
-  
+    // -- RENDER
+    return (
+        <MapContainer
+            center={baseCoords}
+            zoom={10}
+            scrollWheelZoom
+        >
+            <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
 
-  // appel de l'API grace à axios (à installer avec npm)
-  useEffect(() => {
-    axios
-      .get(
-        "https://opendata.paris.fr/api/records/1.0/search/?dataset=coronavirus-commercants-parisiens-livraison-a-domicile&q=&rows=100&facet=code_postal&facet=type_de_commerce&facet=fabrique_a_paris&facet=services"
-      )
-      .then((res) => setShopData(res.data.records));
-  }, []);
+            <MapContent waypoints={waypoints} />
+        </MapContainer>
+    );
+};
 
-  return (
-    <div className="wrapper">
-      <MapContainer
-        center={[48.866669, 2.33333]}
-        zoom={13}
-        scrollWheelZoom={true}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[48.866669, 2.33333]}>
-          <Popup>
-            <h1>hello</h1>
-          </Popup>
-        </Marker>
-      </MapContainer>
-    </div>
-  );
-}
+// Subcomponent mandatory for useMap()
+const MapContent = ({ waypoints }) => {
+    // Map context
+    const map = useMap();
+
+    // ... Code pour générer les waypoints
+
+    // -- RENDER
+    return (
+        <FeatureGroup>
+            {waypoints.map((wp, idx) => {
+                // ... du code
+                // Marker Icon
+                const myIcon = new DivIcon({
+                    // ... options
+                });
+
+                // Add marker
+                return (
+                    <Marker
+                        key={wp.id}
+                        position={[wp.coordinates.latitude, wp.coordinates.longitude]}
+                        icon={myIcon}
+                    >
+                        {/* ... Code du marqueur */}
+                    </Marker>
+                );
+            })}
+        </FeatureGroup>
+    );
+};
 
 export default Map;

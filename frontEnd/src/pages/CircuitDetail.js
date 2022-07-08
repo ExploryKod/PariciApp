@@ -27,7 +27,7 @@ const CircuitsDetails = () => {
 
   return (
     <div className="wrapper">
-      <MapContainer
+      <MapContainer className="leaflet-container"
         center={[48.866669, 2.33333]}
         zoom={12}
         scrollWheelZoom={true}

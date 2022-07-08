@@ -6,7 +6,7 @@ var axios = require("axios");
 
 process.env.SECRET_KEY = 'secret';
 
-router.post("/addNewCircuit", (req, res) => {
+router.post("/addCircuit", (req, res) => {
     console.log(req.body);
     db.circuit
         .findOne({
@@ -34,29 +34,27 @@ router.post("/addNewCircuit", (req, res) => {
 
                                         })
 
-                                        .then((circuitMagasinItem) => {
-                                            res.status(200).json({
-                                                circuit: circuititem,
-                                                magasin: magasinitem,
-                                                circuitMagasin: circuitMagasinItem,
-                                            });
-                                        })
-                                        .catch(err => {
-                                            res.status(402).json(err)
-                                        });
-
                                 })
-
                                 .catch((err) => {
-                                    res.json({error: err});
-                                });
+                                    res.json({ error: err });
+                                })
                         })
-                            
+
 
                     })
                     .catch((err) => {
-                        res.json({error: err});
+                        res.json({ error: err });
                     })
+                    .then((circuitMagasinItem) => {
+                        res.status(200).json({
+                            circuit: circuititem,
+                            magasin: magasinitem,
+                            circuitMagasin: circuitMagasinItem,
+                        });
+                    })
+                    .catch(err => {
+                        res.status(402).json(err)
+                    });
             }
         })
         .catch(err => {
@@ -65,12 +63,73 @@ router.post("/addNewCircuit", (req, res) => {
 });
 
 
+
+
+// router.post("/addNewCircuit", (req, res) => {
+//     console.log(req.body);
+//     db.circuit
+//         .findOne({
+//             where: { id_circuit: req.body.id_circuit ?? null },
+//         })
+//         .then((circuit) => {
+//             if (!circuit) {
+//                 db.circuit
+//                     .create(req.body)
+
+//                     .then((circuititem) => {
+//                         req.body.magasin.split(',').forEach((id_magasin) => {
+//                             db.magasin
+//                                 .create({
+//                                     recordId_magasin: id_magasin,
+//                                 })
+
+//                                 .then((magasinitem) => {
+
+//                                     db.circuit_magasin
+//                                         .create({
+
+//                                             id_circuit: circuititem.id_circuit,
+//                                             id_magasin: magasinitem.id_magasin,
+
+//                                         })
+
+//                                         .then((circuitMagasinItem) => {
+//                                             res.status(200).json({
+//                                                 circuit: circuititem,
+//                                                 magasin: magasinitem,
+//                                                 circuitMagasin: circuitMagasinItem,
+//                                             });
+//                                         })
+//                                         .catch(err => {
+//                                             res.status(402).json(err)
+//                                         });
+
+//                                 })
+
+//                                 .catch((err) => {
+//                                     res.json({ error: err });
+//                                 });
+//                         })
+
+
+//                     })
+//                     .catch((err) => {
+//                         res.json({ error: err });
+//                     })
+//             }
+//         })
+//         .catch(err => {
+//             res.json({ error: 'error' + err })
+//         })
+// });
+
+
 router.get("/allCircuit", (req, res) => {
     db.circuit
         .findAll({
             include: [{
                 model: db.magasin,
-            }, ],
+            },],
         })
         .then((circuits) => {
             if (circuits) {
@@ -157,10 +216,10 @@ router.get('/findCircuitBy/:name_circuit', (req, res) => {
 
 router.get('/all/:limit/:offset', (req, res) => {
     db.circuit.findAll({
-            limit: parseInt(req.params.limit),
-            offset: parseInt(req.params.offset),
+        limit: parseInt(req.params.limit),
+        offset: parseInt(req.params.offset),
 
-        })
+    })
         .then(circuits => {
             res.status(200).json({ circuits: circuits })
         })
@@ -175,7 +234,7 @@ router.get("/getCircuitById/:id_circuit", (req, res) => {
             where: { id_circuit: req.params.id_circuit },
             include: [{
                 model: db.magasin,
-            }, ],
+            },],
         })
         .then((circuits) => {
             res.status(200).json({ circuits: circuits });

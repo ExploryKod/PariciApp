@@ -18,6 +18,9 @@
     align-items: start;
     justify-content: start;
 }
+
+
+
 .NavNav{
     background: #FFFFFF;
     width: 100%;
@@ -66,6 +69,21 @@ border-radius: 5px;
 .sectiontxt {
     padding-top: 25px;
     padding-bottom: 0;
+}
+
+.create-circuit-cta{
+    grid-column:1;
+    grid-row: 1;
+    align-self: center;
+    background-color: #0054A3;
+    color: #fff;
+    text-align: center;
+    width:50%;
+    border-radius: 10px;
+    padding: 0.2em 0;
+    margin-top:1em;
+    margin-bottom:1em;
+    text-decoration: none;
 }
 
 #section1{
@@ -129,3 +147,4 @@ border-radius: 5px;
     background-repeat: no-repeat;
     background-size: cover; 
 }
+

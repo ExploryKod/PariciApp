@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -26,19 +27,19 @@ const Intro = () => {
   }, []);
 
   return (
-    <div className="wrapper containeAllCircuit">
+    <div className="containeAllCircuit">
       <div className="BtnA">
-              <button className="backBtn" type="submit"><span class="material-icons">arrow_back</span></button>
-            <Link className='nameCircuit' to="/CreateCircuits"><button className="createBtn" type="submit" ><span class="material-icons">add_task</span></button></Link>
-              </div>
+        <Link to="/Home" className="backBtn"><span class="material-icons">arrow_back</span></Link>
+        <Link className='nameCircuit' to="/CreateCircuits"><button className="createBtn" type="submit" ><span class="material-icons">add_task</span></button></Link>
+      </div>
       <h2 id="BigTitle" >Selon vos préferences</h2>
 
       <div id="sectionCard">
         {listOfCircuits.map((value) => {
-          
+
           return (
             <div className="cardCircuit">
-              <img className="picture" src={value.image_circuit} />
+              <img className="picture" src={value.image_circuit} alt="carte" />
 
               <Link className='nameCircuit' to={`/CircuitDT/${value.id_circuit}`}>{value.name_circuit}</Link>
 
@@ -57,7 +58,7 @@ const Intro = () => {
           return (
             <div className="cardCircuit">
 
-              <img className="picture" src={value.image_circuit} ></img>
+              <img className="picture" src={value.image_circuit} alt="ambiance du circuit" ></img>
 
               <Link className='nameCircuit' to={`/CircuitDT/${value.id_circuit}`}>{value.name_circuit}</Link>
 

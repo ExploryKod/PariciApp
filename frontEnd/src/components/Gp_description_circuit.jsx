@@ -12,18 +12,17 @@ export const GpCircuitDescription = () => {
 
     // Information permettant de savoir vers quelle page de description du circuit aller:
     const { id_circuit } = useParams();
-    const [data, setData] = useState({});
+    const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get(`http://localhost:3000/circuit/getCircuitById/${id_circuit}`).then((response) =>{
+        axios.get(`http://localhost:3000/circuit/all/${ id_circuit }/0`).then((response) =>{
             setData(response.data.circuits);
-           
         });
     },);
     /**
      * Fonction qui sert à rabaisser ou remonter le panneau de description du circuit:
      * Cela engendre une modification de nombreux composants de la page.
      */
-    
+     console.log(data)
     const toggleDescriptionCard = () => {
         const MainContainer = document.querySelector(".gp-description-main");
 
@@ -66,15 +65,15 @@ export const GpCircuitDescription = () => {
             MainContainer.style.width = '0%';
         }
     }
-
+    
     return (
         <>
-            <div className="gp-circuit-steps"><GpShopsSlider/></div>
+            <div className="gp-circuit-steps"></div>
             <div className="gp-circuit-map" style={{ backgroundImage: `url(${MyImage})` }}></div>
-         
+       
             {/* Ici on ne filtre que les informations issu du bon circuit 
             c'est à dire équivalent à la valeur de la propriété "route" de l'objet qui liste les commerces d'un circuit et de l'url/:route */}
-            {data.map((card, index) => {
+            {data?.map((card, index) => {
                 return(
             
                 <main key={index} className='gp-description-main' >
@@ -86,11 +85,11 @@ export const GpCircuitDescription = () => {
                         <div className="gp-description-card">
                             <span onClick={toggleDescriptionCard}><MdOutlineArrowForwardIos className="arrow-hide-display" /></span>
                             <div className='gp-description-text active'>
-                                <h1>{card.title}</h1>
-                                <p>{card.description}</p>
+                                <h1>{card.name_circuit}</h1>
+                                <p>{card.description_circuit}</p>
                                 <ul>
-                                    <li><span>Date:</span> {card.created_at}</li>
-                                    <li><span>Horaires:</span> {card.created_at}</li>
+                                    <li><span>Date:</span> {card.group_date}</li>
+                                    <li><span>Horaires:</span> {card.group_time}</li>
                                 </ul>
                             </div>
 

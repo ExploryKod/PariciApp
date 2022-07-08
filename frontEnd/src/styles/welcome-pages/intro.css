@@ -142,10 +142,25 @@
     cursor: pointer;
 }
 
-
 @media screen and (min-width: 576px) {
 
-    /* Changing cicles in carrousel */
+    /* Picture and its container */
+
+    .picture-block {
+        width: 100vw;
+        height: 50vh;
+        background-image: url("../../assets/pexels-david-henry-6449831.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .picture-block .introPicture {
+        display: none;
+    }
+
+    /* Make the carrousel bigger for larger screens  */
+
     #carrousel {
         padding: 1em 0 0.5em 0;
         display: flex;
@@ -182,24 +197,6 @@
 
     #titlePart {
         width: 90%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-
-    /* Picture and its container */
-
-    .picture-block {
-        width: 100vw;
-        height: 50vh;
-        background-image: url("../../assets/pexels-david-henry-6449831.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .picture-block .introPicture {
-        display: none;
     }
 
     /* Set buttons at the good position */

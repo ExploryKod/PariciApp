@@ -1,19 +1,21 @@
-.containCircuitDT{
-   
+.containCircuitDT {
+
     background-image: radial-gradient(rgba(41, 41, 41, 0.6), rgba(33, 33, 34, 0.70)), url("../../assets/maping.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
 }
-.contenthead{
+
+.contenthead {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     padding-top: 96px;
     margin-bottom: 10px;
 }
-.arrowBtn{
+
+.arrowBtn {
     border-radius: 7px;
     border: none;
     -webkit-backdrop-filter: blur(15px);
@@ -29,26 +31,30 @@
     align-items: center;
     color: #ffffff;
 }
-.header h3{
+
+.header h3 {
     color: darkgoldenrod;
     font-size: 1em;
     font-weight: 900;
 }
-.header p{
+
+.header p {
     color: #fff;
     font-size: 1.5em;
     font-weight: 700;
 }
-.pict{
-    grid-row:2;
+
+.pict {
+    grid-row: 2;
     height: auto;
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
+
 }
-.contentTXT{
-    grid-row:1;
+
+.contentTXT {
+    grid-row: 1;
     background: white;
     width: 100vw;
     border-bottom-left-radius: 10px;
@@ -57,27 +63,30 @@
     overflow-x: hidden;
     overflow-y: scroll;
 }
-.contentTXT h1{
+
+.contentTXT h1 {
     color: black;
     font-size: .90em;
     font-weight: 900;
 }
-.contentTXT div{
-    width:90%;
+
+.contentTXT div {
+    width: 90%;
     height: auto;
-    display:block;
-    overflow-x:hidden;
+    display: block;
+    overflow-x: hidden;
     color: rgb(20, 20, 20);
     font-size: .70em;
     font-weight: 100;
     word-break: break-all;
 }
-.cardDT{
+
+.cardDT {
     margin: 0 auto;
-    width:90%;
+    width: 90%;
     height: 100%;
     overflow-y: scroll;
-    overflow-x:hidden;
+    overflow-x: hidden;
     display: grid;
     grid-template-rows: auto auto;
     align-items: start;
@@ -86,4 +95,18 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
+}
+
+.to-map-btn {
+
+    align-self: center;
+    background-color: #0054A3;
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    border-radius: 10px;
+    padding: 0.2em 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: none;
 }

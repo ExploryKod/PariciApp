@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import one from "../assets/one.jpg";
 import two from "../assets/two.jpg";
 import three from "../assets/three.jpg";
@@ -23,6 +24,7 @@ const Home = () => {
         <div className="sectiontxt">
         <h2>Tout commence à Paris</h2>
           <p>Créez vos circuits et visitez les artisans de Paris</p>
+          <Link className="create-circuit-cta"  to='/CreateCircuits'>Créez votre circuit</Link>
           </div> 
   
       </div>

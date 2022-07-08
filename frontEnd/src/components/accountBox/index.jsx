@@ -8,7 +8,7 @@ import logo from "../../assets/logoParici.png"
 
 const BoxContainer = styled.div`
   width: 280px;
-  min-height: 570px;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   border-radius: 19px;
@@ -20,7 +20,7 @@ const BoxContainer = styled.div`
 
 const TopContainer = styled.div`
   width: 100%;
-  height: 160px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -68,10 +68,10 @@ const SmallText = styled.h5`
 `;
 
 const InnerContainer = styled.div`
-  
+  background:transparent;
   display: flex;
   flex-direction: column;
-  padding: 0 1.8em;
+  padding: 2.5em 1.8em;
 `;
 
 const backdropVariants = {

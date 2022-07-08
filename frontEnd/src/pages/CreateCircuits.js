@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import axios from "axios";
 import "../styles/circuits-and-map/CreateCircuits.css";
 import Card from "../Card";
@@ -107,7 +108,7 @@ const CreateCircuits = () => {
 
   const addCircuit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3000/circuit/addNewCircuit", {
+    axios.post("http://localhost:3000/circuit/addCircuit", {
       name_circuit: nameCircuit,
       description_circuit: descriptionCircuit,
       arrondissement: selectedRadio,
@@ -115,15 +116,15 @@ const CreateCircuits = () => {
       magasin: saveChoice.toString(),
       circuit_magasin: saveChoice.toString(),
     })
-      .then((response) => {
-        if (response.data.error) {
-          alert(response.data.error);
-        } else {
-          alert(response.data);
-        }
+    .then((response) => {
+      if (response.data.error) {
+        console.log(response.data.error);
+      } else {
+        alert("Circuit Créé");
+      }
 
 
-      });
+    });
 
 
   };
@@ -136,7 +137,7 @@ const CreateCircuits = () => {
           <div>
             <form className="form" onChange={handleOnChange}>
               <div className="BtnCircuit">
-              <button className="backBtn" type="submit"><span class="material-icons">arrow_back</span></button>
+              <Link to="/Home" className="backBtn"><span class="material-icons">arrow_back</span></Link>
               <button className="createBtn" type="submit" onClick={addCircuit}>Créer</button>
               </div>
               <div className="Input">

@@ -35,7 +35,8 @@ function CircuitDT(){
                     <div className="contentTXT">
                         <h1>{CircuitObject.name_circuit}</h1>
                         <div>{CircuitObject.description_circuit}</div>
-                        {/* <p>{CircuitObject.magasins.map(magasin => magasin.recordId_magasin)}</p> */}
+                        <Link className='to-map-btn' to='/circuitDetail'>Explorer le circuit</Link>
+                        <p>{CircuitObject.magasins?.map(magasin => <p>{magasin.recordId_magasin}</p> )}</p>
                     </div>
                 </div>
                
