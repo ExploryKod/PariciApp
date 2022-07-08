@@ -1,9 +1,12 @@
+
+/* Set the map itself */
 .leaflet-container {
     height:100vh;
     width:100%;
     position: fixed;
   }
 
+/* CSS for the layers on the map itseft */
 .circuit {
     position: absolute;
     z-index: 6;
@@ -22,22 +25,18 @@
     font-size: 45px;
 }
 
-.buttons {
-    position: absolute;
-    z-index: 6;
-    right: 0;
-    bottom: 200px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    margin-right: 10px;
-}
-
-.buttons button {
+button {
     height: 40px;
     width: 40px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 10px;
+    border:none;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    background: transparent;
 }
 
 .back {
@@ -48,11 +47,36 @@
     justify-content: end;
     margin-right: 10px;
     margin-top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
 }
 
-.back button {
+.arrow{
     height: 40px;
     width: 40px;
     margin: 5px;
     border-radius: 10px;
+
+}
+
+@media screen and (min-width: 576px) {
+    
+    .leaflet-container {
+        height:95vh;
+        width:100%;
+        position: fixed;
+        bottom:0;
+      }
+
+    .back{
+        position: fixed;
+        margin-top:5vh;
+        
+      }
+
+    
+    
 }

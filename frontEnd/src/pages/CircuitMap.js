@@ -3,8 +3,9 @@ import axios from "axios";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { NavLink } from "react-router-dom";
 
-import "../styles/circuits-and-map/circuitsDetail.css";
-import "../styles/circuits-and-map/Map.css";
+import { BsFillArrowLeftSquareFill, BsFillHeartFill } from "react-icons/bs";
+import "../styles/circuits-and-map/circuitMap.css";
+
 
 const CircuitsDetails = () => {
 
@@ -60,23 +61,16 @@ const CircuitsDetails = () => {
         ))}
       </MapContainer>
       <div className="back">
-       <NavLink to="/AllCircuit">
+       <NavLink to="/AllCircuits">
         <button>
-          <img src="./pics/svg/corner-down-left.svg" alt="arrow" />
+        <BsFillArrowLeftSquareFill className="arrow"/>
         </button>
        </NavLink>
       </div>
       <div className="circuit">
         <h1>La balade des pâtissiers</h1>
       </div>
-      <div className="buttons">
-      <NavLink to="/description">
-        <button>
-          <img src="./pics/svg/heart.svg" alt="coeur" />
-        </button>
-      </NavLink>
-
-      </div>
+    
     </div>
   );
 };
