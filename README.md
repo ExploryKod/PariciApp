@@ -82,7 +82,7 @@ Pour réaliser l'installation, vous avez besoin :
 - [Morgane Dassonville](https://github.com/Jun080)
 - Martin Claver 
 
-Pour avoir plus d'information sur l'historique du projet : <a href="https://github.com/JulienVJ/Parici">repository initial</a> 
+#### Pour avoir plus d'information sur l'historique du projet : <a href="https://github.com/JulienVJ/Parici">repository initial</a><br/> 
 Pour des raisons liées à l'entrée en stage de certains membres, le travail a été continué par les membres restant ici sur une branche commune.
 
 ### Technologies : 
