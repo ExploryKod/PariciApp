@@ -6,7 +6,7 @@
 
 "Parici" est un proof of concept (POC) créé dans le cadre du projet final de Hetic ayant pour but de vous faire découvrir le Paris des petits commerces.<br/> 
 
-En effet, l'activité des petits commerçants sur Paris est vivante mais nombre d'entre-nous n'avons pas idée de cette richesse tant nous sommes pris dans nos habitudes. Nous connaissons les commerces de notre quartier ou allons dans les grands magasins. 
+En effet, l'activité des petits commerçants sur Paris est vivante, mais nombre d'entre-nous n'est pas conscient de cette richesse tant nous sommes pris dans nos habitudes. Nous connaissons les commerces de notre quartier ou allons dans les grands magasins.
 
 Ce POC vise à faire découvrir cette richesse du petit commerce en proposant des circuits sur Paris que l'on peux faire sur une journée ou une aprés-midi. Au lieu de devoir aller soit-même rechercher les commerces et les circuits, Parici vous facilite la tâche : vous concevez votre circuit avec aisance grâce à des propositions automatisées ou alors vous découvrez un circuit déjà créé par d'autres.  
 
@@ -18,24 +18,28 @@ Le but est aussi pédagogique: apprendre à utiliser des technologies comme Node
 
 ### Installation 
 
-Pour réaliser l'installation vous avez besoin : 
+Pour réaliser l'installation, vous avez besoin : 
 - Installer Node.js en suivant les étapes sur <a href="https://nodejs.org/fr/" >ce site</a>
 - Installer aussi NPM.
 - Vous pouvez utiliser des outils comme MAMP afin d'être connecté à une base MySQL ou autre moyen (PHP n'est pas requis).
 
 #### Une fois que vous êtes connecté à MySQL:<br/>
-- Créez une base de donnée vide nommée paricidb (tout en minuscule).
+- Créez une base de données vide nommée paricidb (tout en minuscule).
 - Puis ouvrez votre IDE et allez dans le dossier backEnd sur votre terminal. 
 - Ouvrez un second terminal et aller dans frontEnd.
 - Dans backEnd vous devez vérifiez certains points: 
     + Dans le fichier database/db.js :<br/>
       Dans la variable dbinfo: vérifiez que le mot de passe correspond au vôtre  (ici c'est "root" mais certains système ont rien ou un autre mot de passe)<br/>
-      En bas de ce fichier, trouvez la ligne de code commentée <code>dbinfo.sync({ force: true });</code>: décommentez-là. 
+      ##### En bas de ce fichier, trouvez la ligne de code commentée <code>dbinfo.sync({ force: true });</code>: décommentez-là. 
+      Cela permet de pouvoir la base de donnée avec les données pré-définies. 
+      Attention : recommentez-là une fois que votre base de donnée a été remplie automatiquement.
+      Si besoin est nous avons aussi inclu le fichier SQL de la BDD dans "sql folder".
+      
     + Dans le fichier serveur.js, vous verrez que le port utilisé par le back est 3000: déconnectez vos autres activités de ce port qui doit être libre.
  - Lancer ensuite dans le dossier backEnd : npm install
  - Normalement, le dossier package.json que ce soit celui du back ou du front n'est plus dans gitignore donc les modules supplémentaires doivent s'installer.
  
-#### Une fois le backEnd bien démarrer ("connexion à mon db" s'affiche), vous lancez le front avec React :<br/>
+#### Une fois le backEnd bien démarré ("connexion à mon db" s'affiche), vous lancez le front avec React :<br/>
 
   Tapez `npm install` pour installer les node-modules nécessaires à React.
  
