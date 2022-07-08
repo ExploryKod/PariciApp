@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import "../styles/circuits-and-map/CreateCircuits.css";
-import Card from "../Card";
+import Card from "../components/Card";
 
 const CreateCircuits = () => {
   const [shopData, setShopData] = useState([]);
