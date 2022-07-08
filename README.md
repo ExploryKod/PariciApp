@@ -82,6 +82,8 @@ Pour réaliser l'installation, vous avez besoin :
 - [Morgane Dassonville](https://github.com/Jun080)
 - Martin Claver 
 
+Pour avoir plus d'information sur l'historique du projet : <a href="https://github.com/JulienVJ/Parici">repository initial</a> 
+Pour des raisons liées à l'entrée en stage de certains membres, le travail a été continué par les membres restant ici sur une branche commune.
 
 ### Technologies : 
    ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
