@@ -36,11 +36,15 @@ Pour réaliser l'installation vous avez besoin :
  - Normalement, le dossier package.json que ce soit celui du back ou du front n'est plus dans gitignore donc les modules supplémentaires doivent s'installer.
  
 #### Une fois le backEnd bien démarrer ("connexion à mon db" s'affiche), vous lancez le front avec React :<br/>
-    + écrivez <code>npm install </code> pour installer les node-modules nécessaires à React.
+
+  Tapez `npm install` pour installer les node-modules nécessaires à React.
  
  - Le fichier package.json a normalement été préservé dans le repo mais si ce n'est pas le cas, voici les modules supplémentaires à installer (npm install + nom) :<br/>
    Pour le back end : express, nodemon, sequelize
    Pour le front-end: sass, react-icons, react-router, react-leaflet (voir la documentation en ligne) sur l'installation. 
+  
+  Ensuite, pour démarrez les environnement de développement: `npm start` 
+  
 - Vous démarrez ainsi les environnements de développement dans cet ordre (ou alors assurez-vous de libérer le port 3000 pour le back): 
   + En premier sur backEnd : npm start (pour avoir le port 3000)
   + En second sur frontEnd (il demandera de changer de port : tapez "Y"): npm start 
