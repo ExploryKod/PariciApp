@@ -22,9 +22,8 @@ Pour réaliser l'installation vous avez besoin :
 - Installer Node.js en suivant les étapes sur <a href="https://nodejs.org/fr/" >ce site</a>
 - Installer aussi NPM.
 - Vous pouvez utiliser des outils comme MAMP afin d'être connecté à une base MySQL ou autre moyen (PHP n'est pas requis).
-- 
 
-Une fois que vous êtes connecté à MySQL:
+#### Une fois que vous êtes connecté à MySQL:<br/>
 - Créez une base de donnée vide nommée paricidb (tout en minuscule).
 - Puis ouvrez votre IDE et allez dans le dossier backEnd sur votre terminal. 
 - Ouvrez un second terminal et aller dans frontEnd.
@@ -35,7 +34,8 @@ Une fois que vous êtes connecté à MySQL:
     + Dans le fichier serveur.js, vous verrez que le port utilisé par le back est 3000: déconnectez vos autres activités de ce port qui doit être libre.
  - Lancer ensuite dans le dossier backEnd : npm install
  - Normalement, le dossier package.json que ce soit celui du back ou du front n'est plus dans gitignore donc les modules supplémentaires doivent s'installer.
- - Une fois le backEnd bien démarrer ("connexion à mon db" s'affiche), vous lancez le front avec React : 
+ 
+#### Une fois le backEnd bien démarrer ("connexion à mon db" s'affiche), vous lancez le front avec React :<br/>
     + écrivez <code>npm install </code> pour installer les node-modules nécessaires à React.
  
  - Le fichier package.json a normalement été préservé dans le repo mais si ce n'est pas le cas, voici les modules supplémentaires à installer (npm install + nom) :<br/>
@@ -45,7 +45,7 @@ Une fois que vous êtes connecté à MySQL:
   + En premier sur backEnd : npm start (pour avoir le port 3000)
   + En second sur frontEnd (il demandera de changer de port : tapez "Y"): npm start 
   
-Rappel des commandes principales: 
+#### Rappel des commandes principales:<br/> 
  0. `NPM` ou `Yarn` sont requis
  1. Installer les modules `NPM`:
  
@@ -70,7 +70,8 @@ Rappel des commandes principales:
 - [Mathias Bouillon](https://github.com/MathiasBln)
 - [Julien Vérité](https://github.com/JulienVJ)
 - [Idris Abelli](https://github.com/Sinitus)
-- 
+- [Morgane Dassonville](https://github.com/Jun080)
+- Martin Claver 
 
 
 ### Technologies : 
