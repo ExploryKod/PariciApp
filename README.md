@@ -51,7 +51,9 @@ Pour réaliser l'installation vous avez besoin :
   
 #### Rappel des commandes principales:<br/> 
  0. `NPM` ou `Yarn` sont requis
- 1. Installer les modules `NPM`:
+
+ Si vous optez pour npm:<br/>
+ 2. Installer les modules `NPM`:
  
     - Dans backEnd, tapez cette commande: 
     ```sh
