@@ -2,7 +2,7 @@
   <img width="30%" src="frontEnd/public/pics/logoParici.png" />
 </p>
 
-## <p align="center"> Découvrez les petites commercants de Paris avec Parici </p>
+## <p align="center"> Découvrez les petits commercants de Paris avec Parici </p>
 
 "Parici" est un proof of concept (POC) créé dans le cadre du projet final de Hetic ayant pour but de vous faire découvrir le Paris des petits commerces.<br/> 
 
