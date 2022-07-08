@@ -75,7 +75,7 @@ export const GpCircuitDescription = () => {
             c'est à dire équivalent à la valeur de la propriété "route" de l'objet qui liste les commerces d'un circuit et de l'url/:route */}
             {data?.map((card, index) => {
                 return(
-            
+             
                 <main key={index} className='gp-description-main' >
 
                     {/* Composant permettant d'afficher soit la liste des commerces du circuit soit une carte du circuit en fond de page */}
