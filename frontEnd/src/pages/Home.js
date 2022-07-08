@@ -25,6 +25,7 @@ const Home = () => {
         <h2>Tout commence à Paris</h2>
           <p>Créez vos circuits et visitez les artisans de Paris</p>
           <Link className="create-circuit-cta"  to='/CreateCircuits'>Créez votre circuit</Link>
+          <Link className="visit-circuit-cta" to='//AllCircuits'>Voir nos circuits</Link>
           </div> 
   
       </div>

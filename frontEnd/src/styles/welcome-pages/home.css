@@ -1,19 +1,20 @@
 @import "../global-styles/base.css";
 
-.containerHome{
+.containerHome {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-.home-page{
+
+.home-page {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     background: linear-gradient(303deg, #e6f2fd 0%, #FFFFFF 84.17%);
     display: grid;
-    grid-row-gap:1em;
+    grid-row-gap: 1em;
     grid-template-rows: 1fr 2fr;
     align-items: start;
     justify-content: start;
@@ -21,7 +22,7 @@
 
 
 
-.NavNav{
+.NavNav {
     background: #FFFFFF;
     width: 100%;
     display: flex;
@@ -29,67 +30,91 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.NavNav span{
+
+.NavNav span {
     color: rgb(96, 181, 255);
 }
-#head{
+
+#head {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 3fr;
     column-gap: 14px;
     justify-content: center;
     justify-items: center;
 }
-img.Cardthree{
+
+img.Cardthree {
     width: 48.63px;
     height: 148.66px;
     filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.22));
     border-radius: 5px;
 }
 
-img.Cardtwo{
+img.Cardtwo {
     width: 48.63px;
-height: 148.66px;
+    height: 148.66px;
 
-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.22));
-border-radius: 5px;
-    
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.22));
+    border-radius: 5px;
+
 }
-img.Cardone{
+
+img.Cardone {
     width: 129.71px;
-height: 146.66px;
-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.22));
-border-radius: 5px;
-    
+    height: 146.66px;
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.22));
+    border-radius: 5px;
+
 }
 
-.contentHome { 
+.contentHome {
     grid-row: 1;
-    height:auto;
+    height: auto;
 }
+
 .sectiontxt {
     padding-top: 25px;
     padding-bottom: 0;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-around;
 }
 
-.create-circuit-cta{
-    grid-column:1;
+.create-circuit-cta {
+    grid-column: 1;
     grid-row: 1;
     align-self: center;
     background-color: #0054A3;
     color: #fff;
     text-align: center;
-    width:50%;
+    width: 50%;
     border-radius: 10px;
-    padding: 0.2em 0;
-    margin-top:1em;
-    margin-bottom:1em;
+    padding: 0.5em 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
     text-decoration: none;
 }
 
-#section1{
+.visit-circuit-cta {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    background-color: #0054A3;
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    border-radius: 10px;
+    padding: 0.5em 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+
+#section1 {
     overflow-x: hidden;
     width: 100vw;
-    grid-row:2;
+    grid-row: 2;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
@@ -102,7 +127,9 @@ border-radius: 5px;
 
 }
 
-.card-sector { 
+/* Cartes des arrondissements sous la première section */
+
+.card-sector {
     padding: 16px;
     border-radius: 20px;
     width: 120px;
@@ -117,34 +144,35 @@ border-radius: 5px;
     justify-content: center;
 }
 
-.cardA1{
+.cardA1 {
     grid-column: 1;
     grid-row: 1;
     background-image: url('../../assets/paris1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
-.cardA2{
-   grid-column: 1;
-   grid-row: 2;
+
+.cardA2 {
+    grid-column: 1;
+    grid-row: 2;
     background-image: url('../../assets/paris2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
-.cardA3{
+
+.cardA3 {
     grid-column: 2;
-    grid-row:1;
+    grid-row: 1;
     background-image: url('../../assets/paris3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.cardA4{
-    grid-column:2;
+.cardA4 {
+    grid-column: 2;
     grid-row: 2;
     background-image: url('../../assets/paris4.jpg');
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
-
