@@ -44,7 +44,7 @@ Pour réaliser l'installation, vous avez besoin :
   Tapez `npm install` pour installer les node-modules nécessaires à React.
  
  - Le fichier package.json a normalement été préservé dans le repo mais si ce n'est pas le cas, voici les modules supplémentaires à installer (npm install + nom) :<br/>
-   Pour le back end : express, nodemon, sequelize
+   Pour le back end : express, nodemon, sequelize <br/>
    Pour le front-end: sass, react-icons, react-router, react-leaflet (voir la documentation en ligne) sur l'installation. 
   
   Ensuite, pour démarrez les environnement de développement: `npm start` 
